@@ -17,7 +17,11 @@ New way:
 
 ## getting started
 
-Open your Powershell Profile File and add the following line: 
+You can start and test the module by calling this one-liner:
+
+    $f = "$env:TEMP/psregister.psm1";$c = new-object system.net.webclient;$c.DownloadFile("http://ow.ly/u5RmT", $f);Import-Module $f -DisableNameChecking;add-register-location "psregister://psreg.net/";
+
+Otherwise clone this repo and open your Powershell Profile File and add the following line: 
 
     Import-Module path_to_the_file\PSRegister.psm1 -DisableNameChecking
 
