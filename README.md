@@ -18,9 +18,13 @@ Scripts to register can be found on [PsReg.net](http://psreg.net)
 
 ## getting started
 
-You can start and test the module by calling this one-liner:
+You can start and test the module by calling this one-liner from the command line:
 
-    $f = "$env:TEMP/psregister.psm1";$c = new-object system.net.webclient;$c.DownloadFile("http://ow.ly/u5RmT", $f);Import-Module $f -DisableNameChecking;add-register-location "psregister://psreg.net/";
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://psreg.net/install.ps1'))"
+    
+or directly from powershell: 
+
+    iex ((new-object net.webclient).DownloadString('http://psreg.net/install.ps1'))
 
 Otherwise clone this repo and open your Powershell Profile File and add the following line: 
 
