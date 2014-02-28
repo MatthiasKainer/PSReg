@@ -14,6 +14,7 @@ New way:
     register PSColorWriter; # <- This will download the module from the remote repository and import it
     Write-Output-Color -Red "Look " -White "I have colors";
     
+Scripts to register can be found on [PsReg.net](http://psreg.net)
 
 ## getting started
 
